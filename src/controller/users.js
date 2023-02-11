@@ -20,8 +20,8 @@ const createNewUser = (req, res) => {
 };
 
 const updateDataUser = (req, res) => {
-  const { idUser } = req.params;
-  console.log('idUser :', idUser);
+  const { id } = req.params;
+  console.log('idUser :', id);
   res.json({
     message: 'UPDATE User Success',
     data: req.body,
@@ -29,11 +29,11 @@ const updateDataUser = (req, res) => {
 };
 
 const deleteDataUser = (req, res) => {
-  const { idUser } = req.params;
+  const { id } = req.params;
   res.json({
     message: 'DELETE user success',
     data: {
-      id: idUser,
+      id: id,
       name: 'Almira Mahsa',
       email: 'almiramahsa9@gmai.com',
       address: 'Palu, Sulawesi Tengah',
