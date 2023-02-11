@@ -6,7 +6,7 @@ const middlewareLogRequest = require('./middleware/logs');
 const app = express();
 
 app.use(middlewareLogRequest);
-
+app.use(express.json());
 app.use('/users', userRoutes);
 
 app.listen(4000, () => {

@@ -4,7 +4,11 @@ const getAllUsers = (req, res) => {
   });
 };
 const createNewUser = (req, res) => {
-  res.json({ message: 'CREATE new user success' });
+  console.log(req.body);
+  res.json({
+    message: 'CREATE new user success',
+    data: req.body,
+  });
 };
 
 module.exports = {
